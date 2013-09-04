@@ -33,4 +33,8 @@ findPuzzle "a  le"
 ```
 
 ----
+some other words
+`/usr/share/dict/words` holds all the words for `GNU aspell` in UNIX/Linux systems.
+
+----
 FOR THOSE WHO PLAY WORD PUZZLES!
