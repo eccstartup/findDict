@@ -7,6 +7,8 @@ Find words in UNIX/Linux systems
 install
 
 ```
+git clone https://github.com/eccstartup/findDict
+cd findDict
 cabal configure
 cabal build
 cabal install
