@@ -2,7 +2,8 @@ module Data.Dict.Utils
        (
          findPuzzle,
          findSub,
-         findExact
+         findExact,
+         findAnagrams
        ) where
 
 
@@ -67,3 +68,14 @@ helpExact word dic
           | elem word dic = True
           | otherwise = False
 
+
+findAnagrams :: String -> IO ()
+findAnagrams word = do
+  fi <- readFile dictFile
+  let lis = lines fi
+  mapM_ print $ filter (isAnagramOf word) lis
+
+isAnagramOf :: String -> String -> Bool
+isAnagramOf word1 word2 = sort word1' == sort word2' && word1' /= word2'
+                          where word1' = map toLower word1
+                                word2' = map toLower word2
